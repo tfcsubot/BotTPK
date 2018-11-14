@@ -32,10 +32,24 @@ class Bot:
 token = '689934930:AAE6uhU21M7ml6EXqgLdfogh7IJO6fujf5M'
 BotTPK = Bot(token)
 
-new_offset = None
+def main():
+    new_offset = None
 
-if __name__ == '__main__':
-    for i in range(10):
-        last_update = BotTPK.get_last_update()
-        BotTPK.send_message(last_update['message']['chat']['id'],'Hello')
+    while True:
+        BotTPK.get_updates(new_offset)
         
+        last_update = BotTPK.get_last_update()
+        
+        last_update_id = last_update['update_id']
+        last_chat_text = last_update['message']['text']
+        last_chat_id = last_update['message']['chat']['id']
+        last_chat_name = last_update['message']['chat']['first_name']
+        
+        BotTPK.send_message(last_chat_id,'Hello, {}'.format(last_chat_name))
+        
+if __name__ == '__main__':
+    try:
+        main()
+    except KeyboardInterrupt:
+        exit()
+    
