@@ -1,8 +1,6 @@
 import requests
 import datetime
 
-# API = 689934930:AAE6uhU21M7ml6EXqgLdfogh7IJO6fujf5M 
-
 class Bot:
 
     def __init__(self,token):
@@ -38,7 +36,6 @@ new_offset = None
 
 if __name__ == '__main__':
     for i in range(10):
-        BotTPK.get_last_update()
+        BotTPK.get_last_updates()
         BotTPK.send_message(last_update['message']['chat']['id'],'Hello')
         
-    
