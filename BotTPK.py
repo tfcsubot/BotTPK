@@ -47,7 +47,7 @@ def main():
         
         BotTPK.send_message(last_chat_id,'Hello, {}'.format(last_chat_name))
 
-        new_offset += 1
+        new_offset = last_update_id + 1
         
 if __name__ == '__main__':
     try:
