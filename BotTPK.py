@@ -36,6 +36,6 @@ new_offset = None
 
 if __name__ == '__main__':
     for i in range(10):
-        BotTPK.get_last_updates()
+        BotTPK.get_last_update()
         BotTPK.send_message(last_update['message']['chat']['id'],'Hello')
         
