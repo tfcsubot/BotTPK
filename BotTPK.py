@@ -48,10 +48,15 @@ def main():
         BotTPK.send_message(last_chat_id,'Hello, {}'.format(last_chat_name))
 
         new_offset = last_update_id + 1
-        
+
+while True:
+    main()
+
+'''     
 if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
         exit()
     
+'''
