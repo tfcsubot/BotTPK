@@ -3,6 +3,7 @@ import datetime
 
 # API = 689934930:AAE6uhU21M7ml6EXqgLdfogh7IJO6fujf5M 
 
+
 greet_bot = BotHandler(token)  
 greetings = ('здравствуй', 'привет', 'ку', 'здорово')  
 now = datetime.datetime.now()
