@@ -34,7 +34,7 @@ if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     try:
         app = loop.run_until_complete(init_app(loop))
-        web.run_app(app, host='77.111.247.69', port=443)
+        web.run_app(app, host='127.0.0.1', port=443)
     except Exception as e:
         print('Error create server: %r' % e)
     finally:
