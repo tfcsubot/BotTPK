@@ -34,7 +34,7 @@ if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     try:
         app = loop.run_until_complete(init_app(loop))
-        web.run_app(app, host='peaceful-beyond-54704.herokuapp.com', port=443)
+        web.run_app(app, host='peaceful-beyond-54704.herokuapp.com', port=8080)
     except Exception as e:
         print('Error create server: %r' % e)
     finally:
